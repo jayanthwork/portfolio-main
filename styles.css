@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+    color: #222;
+}
+header {
+    background: #222;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+nav {
+    margin-top: 1rem;
+}
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.intro img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #222;
+}
+.intro-text h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+}
+.intro-text p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+section {
+    margin-top: 2.5rem;
+}
+h2 {
+    color: #222;
+    margin-bottom: 1rem;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+.project-card {
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+.project-card h3 {
+    margin-top: 0;
+}
+.contact {
+    margin-top: 2rem;
+}
+.contact a {
+    color: #222;
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .container { padding: 1rem; }
+    .intro { flex-direction: column; align-items: flex-start; }
+    .intro img { margin-bottom: 1rem; }
+}
