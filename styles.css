@@ -5,12 +5,32 @@ body {
     background: #f5f7fa;
     color: #222;
 }
+
+/* Header Flex Layout */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.site-title h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: left;
+}
+
 header {
     background: #222;
     color: #fff;
-    padding: 2rem 0;
-    text-align: center;
+    padding: 2rem 0 1rem 0;
+    text-align: unset;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
+
 nav {
     margin-top: 1rem;
 }
@@ -26,23 +46,85 @@ nav a:hover {
 .container {
     max-width: 900px;
     margin: 2rem auto;
-    padding: 2rem;
+    padding: 2rem 2rem; /* Ensure left and right padding */
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
+
+/* General section style */
+section,
+.certifications-section,
+.featured-articles-section,
+.contact {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem 2rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+/* Only center-align text for these sections */
+.certifications-section,
+.featured-articles-section,
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Profile (Intro) Section: horizontal on desktop */
 .intro {
     display: flex;
     align-items: center;
     gap: 2rem;
-    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding: 2rem 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
 }
+
+/* Education Section: horizontal on desktop */
+.education-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Profile (Intro) Section */
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0;
+    padding: 2rem 2rem; /* Add 2rem left and right padding */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
 .intro img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    background: #f0f0f0; /* Light gray background */
+    padding: 1rem;
+    border-radius: 50%;   /* Makes the image circular */
+    width: 180px;
+    height: 180px;
     object-fit: cover;
-    border: 3px solid #222;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+}
+.intro-text {
+    flex: 1;
 }
 .intro-text h1 {
     margin: 0 0 0.5rem 0;
@@ -53,81 +135,255 @@ nav a:hover {
     font-size: 1.2rem;
     color: #444;
 }
-section {
-    margin-top: 2.5rem;
+
+/* Education Section */
+.education-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
-h2 {
-    color: #222;
-    margin-bottom: 1rem;
+
+.education-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 110px;
 }
+
+.logo-bubble-spacer {
+    height: 18px; /* space above/below the bubbles */
+}
+
+.college-logo {
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+    margin: 16px 0;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border: 3px solid #ffd600;
+    margin-left: 0; /* Remove left shift */
+}
+
+.college-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background: none;
+    display: block;
+    margin: 0; /* Remove manual shifts */
+}
+
+.logo-line-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 36px;     /* Reduced from 60px */
+    position: relative;
+}
+
+.logo-bubble {
+    width: 10px;      /* Slightly smaller */
+    height: 10px;
+    background: #ffd600;
+    border-radius: 50%;
+    margin-bottom: 0;
+    margin-top: 0;
+    box-shadow: 0 1px 4px rgba(255, 214, 0, 0.15);
+    border: 2px solid #fff;
+    position: relative;
+    z-index: 3;
+}
+
+.logo-vertical-line {
+    width: 3px;
+    height: 24px;     /* Reduced from 40px */
+    background: #ffd600;
+    border-radius: 2px;
+    margin: 0;
+}
+
+.education-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.edu-details-group {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.dotted-line {
+    width: 50px;
+    height: 0;
+    border-top: 3px dotted #ffd600;
+    margin-right: 1rem;
+}
+
+.edu-details {
+    display: inline-block;
+    background: linear-gradient(135deg, #e3f2fd 60%, #fffde7 100%);
+    border-radius: 24px;
+    padding: 1rem 2rem;
+    margin-top: 1.2rem;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+    color: #1976d2;
+    font-size: 1.05rem;
+    font-weight: 500;
+    min-width: 220px;
+}
+
+.edu-details .degree {
+    font-weight: 700;
+    color: #fbc02d;
+    font-size: 1.15rem;
+}
+.edu-details .branch {
+    color: #1565c0;
+}
+.edu-details .college {
+    color: #333;
+}
+.edu-details .year {
+    color: #888;
+    font-size: 0.98rem;
+}
+
+section,
+.certifications-section,
+.featured-articles-section,
+.contact {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem 2rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+/* Only center-align text for these sections */
+.certifications-section,
+.featured-articles-section,
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Projects Section */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
+    gap: 2.5rem; /* Increased gap for more space between projects */
+    width: 100%;
+    justify-items: center;
 }
+
 .project-card {
-    background: #f5f7fa;
-    border-radius: 8px;
-    padding: 1.2rem;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    width: 100%;
+    max-width: 320px;
+    text-align: left;
+    transition: box-shadow 0.2s;
+    margin-bottom: 0.5rem; /* Extra bottom margin for stacked layout on mobile */
 }
-.project-card h3 {
+
+/* Section Title Style */
+.section-title {
+    font-size: 2rem;
+    color: #1976d2;
+    font-weight: 700;
     margin-top: 0;
-}
-.contact {
-    margin-top: 2rem;
-}
-.contact a {
-    color: #222;
-    text-decoration: underline;
-}
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+    background: linear-gradient(90deg, #fffde7 60%, #e3f2fd 100%);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    box-shadow: 0 1px 6px rgba(25, 118, 210, 0.06);
 }
 
-.contact-form label {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+/* Responsive: stack vertically on mobile */
+@media (max-width: 700px) {
+    section,
+    .education-section,
+    .certifications-section,
+    .featured-articles-section,
+    .contact {
+        padding: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .education-section,
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    resize: vertical;
-}
+@media (max-width: 600px) {00px) {
+    .header-flex {
+        flex-direction: column;   flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem;
+    }
+    nav {   nav {
 
-.contact-buttons {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
 
-.contact-form button,
-.contact-btn {
-    background: #0072b1;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background 0.2s;
-}
 
-.contact-form button:hover,
-.contact-btn:hover {
-    background: #005983;
-}
-@media (max-width: 600px) {
+
+
+
+
+
+
+
+
+}    .intro img { margin-bottom: 1rem; }    .intro { flex-direction: column; align-items: flex-start; }    .container { padding: 1rem; }    }        font-size: 1.5rem;    .site-title h1 {    }        text-align: right;        width: 100%;        margin-top: 1rem;        margin-top: 1rem;
+        width: 100%;
+        text-align: right;
+    }
+    .site-title h1 {
+        font-size: 1.5rem;
+    }
     .container { padding: 1rem; }
     .intro { flex-direction: column; align-items: flex-start; }
     .intro img { margin-bottom: 1rem; }
+}
+
+@media (max-width: 700px) {
+    section, .education-section, .certifications-section, .featured-articles-section {
+        padding: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .education-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
 }
