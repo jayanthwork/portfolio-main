@@ -8,47 +8,98 @@
 </head>
 <body>
     <header>
-        <h1>Jayanth Chennamsetti</h1>
-        <p>Software Developer | Web Enthusiast | Problem Solver</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <a href="#blogs">blog</a>
-        </nav>
+        <div class="header-flex">
+            <div class="site-title">
+                <h1>Jayanth Chennamsetti</h1>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#blogs">blog</a>
+            </nav>
+        </div>
     </header>
     <div class="container">
+        <!-- Profile Section -->
+        <!-- About Me / Info Section -->
         <section class="intro" id="about">
-            <img src="profile.png" alt="Jayanth Chennamsetti Profile Photo">
+            <h2 class="section-title">About Me</h2>
+            <div class="intro-left">
+                <img src="profile.png" alt="Jayanth Chennamsetti Profile Photo">
+            </div>
             <div class="intro-text">
+                <div class="subtitle-highlight">
+                    Software Developer &nbsp;|&nbsp; Web Enthusiast &nbsp;|&nbsp; Problem Solver
+                </div>
                 <h1>Hello, I'm Jayanth!</h1>
                 <p>
                     I'm a passionate software developer with experience in building web applications, solving real-world problems, and continuously learning new technologies. Welcome to my portfolio!
                 </p>
             </div>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Project One</h3>
-                    <p>A brief description of your project. What does it do? What technologies did you use?</p>
-                    <a href="#">View on GitHub</a>
+
+        <!-- Education Section -->
+        <section class="education-section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-logos">
+                <div class="logo-bubble-spacer"></div>
+                <div class="college-logo">
+                    <img src="btech-logo.png" alt="B.Tech or College Logo">
                 </div>
-                <div class="project-card">
-                    <h3>Project Two</h3>
-                    <p>Another project description. Highlight your role and the impact of the project.</p>
-                    <a href="#">View on GitHub</a>
+                <div class="logo-line-group">
+                    <div class="logo-bubble"></div>
+                    <div class="logo-vertical-line"></div>
                 </div>
-                <div class="project-card">
-                    <h3>Project Three</h3>
-                    <p>Describe a third project. Mention any challenges you overcame or unique features.</p>
-                    <a href="#">View on GitHub</a>
+                <div class="college-logo">
+                    <img src="intermediate-logo.png" alt="Intermediate or College Logo">
+                </div>
+                <div class="logo-bubble-spacer"></div>
+            </div>
+            <div class="education-details-list">
+                <div class="edu-details-group">
+                    <div class="dotted-line"></div>
+                    <div class="edu-details">
+                        <span class="degree">B.Tech</span><br>
+                        <span class="branch">Electronics & Communication Engineering</span><br>
+                        <span class="college">Seshadri Rao Gudlavalleru Engineering College</span><br>
+                        <span class="year">2020 - 2024</span>
+                    </div>
+                </div>
+                <div class="edu-details-group">
+                    <div class="dotted-line"></div>
+                    <div class="edu-details">
+                        <span class="degree">Intermediate</span><br>
+                        <span class="branch">MPC</span><br>
+                        <span class="college">Sri Chaithanya Junior College</span><br>
+                        <span class="year">2018 - 2020</span>
+                    </div>
                 </div>
             </div>
         </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Short description of Project 1.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Short description of Project 2.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Short description of Project 3.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
         <section class="contact" id="contact">
-            <h2>Contact</h2>
+            <h2 class="section-title">Contact</h2>
             <form class="contact-form" action="mailto:jayanthchennamsetti@gmail.com" method="POST" enctype="text/plain">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
