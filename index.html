@@ -4,119 +4,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayanth Chennamsetti | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-flex">
-            <div class="site-title">
-                <h1>Jayanth Chennamsetti</h1>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Jayanth Chennamsetti</h2>
             </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <a href="#blogs">blog</a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="blogs.html" class="nav-link">Blogs</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
-    <div class="container">
-        <!-- Profile Section -->
-        <!-- About Me / Info Section -->
-        <section class="intro" id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="intro-left">
-                <img src="profile.png" alt="Jayanth Chennamsetti Profile Photo">
-            </div>
-            <div class="intro-text">
-                <div class="subtitle-highlight">
-                    Software Developer &nbsp;|&nbsp; Web Enthusiast &nbsp;|&nbsp; Problem Solver
-                </div>
-                <h1>Hello, I'm Jayanth!</h1>
-                <p>
-                    I'm a passionate software developer with experience in building web applications, solving real-world problems, and continuously learning new technologies. Welcome to my portfolio!
-                </p>
-            </div>
-        </section>
 
-        <!-- Education Section -->
-        <section class="education-section" id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="education-logos">
-                <div class="logo-bubble-spacer"></div>
-                <div class="college-logo">
-                    <img src="btech-logo.png" alt="B.Tech or College Logo">
-                </div>
-                <div class="logo-line-group">
-                    <div class="logo-bubble"></div>
-                    <div class="logo-vertical-line"></div>
-                </div>
-                <div class="college-logo">
-                    <img src="intermediate-logo.png" alt="Intermediate or College Logo">
-                </div>
-                <div class="logo-bubble-spacer"></div>
-            </div>
-            <div class="education-details-list">
-                <div class="edu-details-group">
-                    <div class="dotted-line"></div>
-                    <div class="edu-details">
-                        <span class="degree">B.Tech</span><br>
-                        <span class="branch">Electronics & Communication Engineering</span><br>
-                        <span class="college">Seshadri Rao Gudlavalleru Engineering College</span><br>
-                        <span class="year">2020 - 2024</span>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hello, I'm <span class="highlight">Jayanth</span></h1>
+                    <h2 class="hero-subtitle">Full Stack Developer & UI/UX Designer</h2>
+                    <p class="hero-description">
+                        Passionate about creating beautiful, functional web experiences.
+                        I specialize in modern web technologies and love solving complex problems.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
                     </div>
                 </div>
-                <div class="edu-details-group">
-                    <div class="dotted-line"></div>
-                    <div class="edu-details">
-                        <span class="degree">Intermediate</span><br>
-                        <span class="branch">MPC</span><br>
-                        <span class="college">Sri Chaithanya Junior College</span><br>
-                        <span class="year">2018 - 2020</span>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="profile.png" alt="Jayanth Chennamsetti" class="profile-img">
+                        <div class="profile-decoration"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Short description of Project 1.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>I'm a passionate developer who loves creating digital experiences</h3>
+                    <p>
+                        With years of experience in web development, I've worked on various projects
+                        ranging from simple landing pages to complex web applications. I'm always
+                        eager to learn new technologies and tackle challenging problems.
+                    </p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <h4>Frontend Development</h4>
+                            <p>HTML, CSS, JavaScript, React, Vue.js</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Backend Development</h4>
+                            <p>Node.js, Python, PHP, MySQL, MongoDB</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Design</h4>
+                            <p>UI/UX Design, Figma, Adobe Creative Suite</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Tools & Others</h4>
+                            <p>Git, Docker, AWS, Agile Methodology</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Short description of Project 2.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Project 3</h3>
-                    <p>Short description of Project 3.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <h2 class="section-title">Contact</h2>
-            <form class="contact-form" action="mailto:jayanthchennamsetti@gmail.com" method="POST" enctype="text/plain">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        </div>
+    </section>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <div class="contact-buttons">
-                    <button type="submit">Send Message</button>
-                    <a class="contact-btn" href="mailto:jayanthchennamsetti@gmail.com">Email</a>
-                    <a class="contact-btn" href="https://www.linkedin.com/in/jayanthchennamsetti/" target="_blank">LinkedIn</a>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <p>Here are some of my recent works</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 1">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured e-commerce platform built with React and Node.js</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
                 </div>
-            </form>
-        </section>
-    </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 2">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>A collaborative task management application with real-time updates</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Socket.io</span>
+                            <span>Express</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 3">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>A responsive weather dashboard with location-based forecasts</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>API Integration</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>jayanth@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Hyderabad, India</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Jayanth Chennamsetti. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
