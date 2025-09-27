@@ -9,7 +9,34 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeContactForm();
     initializeNavigation();
     initializeScrollToTop();
+    initializeThemeToggle(); // Add theme toggle initialization
 });
+
+// Theme Toggle Functionality
+function initializeThemeToggle() {
+    const themeToggle = document.querySelector('.theme-toggle');
+    
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-theme', currentTheme === 'light');
+    
+    // Update button text based on current theme
+    if (themeToggle) {
+        themeToggle.textContent = currentTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+        
+        themeToggle.addEventListener('click', function() {
+            // Toggle between light and dark themes
+            document.body.classList.toggle('light-theme');
+            
+            // Save preference to localStorage
+            const isLight = document.body.classList.contains('light-theme');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            
+            // Update button text
+            this.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+        });
+    }
+}
 
 // Mobile Menu Toggle
 function initializeMobileMenu() {
@@ -22,7 +49,7 @@ function initializeMobileMenu() {
             mobileMenuToggle.classList.toggle('active');
             document.body.classList.toggle('menu-open');
         });
-
+        
         // Close mobile menu when clicking on nav links
         const navLinks = navMenu.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
@@ -32,7 +59,7 @@ function initializeMobileMenu() {
                 document.body.classList.remove('menu-open');
             });
         });
-
+        
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
