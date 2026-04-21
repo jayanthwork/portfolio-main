@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jayanth Chennamsetti — ServiceNow Engineer</title>
-    
-    <!-- Tailwind CSS CDN for utility-first styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: DM Sans and Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Tailwind Configuration: Custom color palette and fonts -->
     <script>
         tailwind.config = {
             theme: {
@@ -57,12 +51,194 @@
         }
     </script>
 
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #FAFAF8;
+            color: #3E3B36;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .lift {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+        }
+
+        .lift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.08);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .soft-link {
+            position: relative;
+            display: inline-block;
+        }
+
+        .soft-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: #5E7559;
+            transition: width 0.4s ease;
+        }
+
+        .soft-link:hover::after {
+            width: 100%;
+        }
+
+        .tag {
+            background: #F5F5F0;
+            border: 1px solid #EBE9E4;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: #E8EDE6;
+            border-color: #A3B89D;
+        }
+
+        .tag.active {
+            background: #5E7559;
+            color: #FAFAF8;
+            border-color: #5E7559;
+        }
+
+        .soft-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #DDDAD3, transparent);
+        }
+
+        ::selection {
+            background: #D1DBCD;
+            color: #3E3B36;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FAFAF8;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #DDDAD3;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B8B4AA;
+        }
+
+        .search-input {
+            background: #F5F5F0;
+            border: 1px solid #EBE9E4;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #A3B89D;
+            box-shadow: 0 0 0 3px rgba(163, 184, 157, 0.15);
+        }
+
+        .category-tab {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-tab:hover {
+            background: #F5F5F0;
+        }
+
+        .category-tab.active {
+            background: #5E7559;
+            color: #FAFAF8;
+        }
+
+        .skill-item, .cert-card, .blog-card {
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover, .cert-card:hover {
+            background: #FAFAF8;
+            border-color: #A3B89D;
+        }
+
+        .blog-card:hover {
+            border-color: #A3B89D;
+        }
+
+        .blog-card.hidden-item {
+            display: none;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+            color: #9A9589;
+        }
+
+        .no-results.visible {
+            display: block;
+        }
+
+        .add-btn {
+            border: 2px dashed #DDDAD3;
+            color: #9A9589;
+            transition: all 0.3s ease;
+        }
+
+        .add-btn:hover {
+            border-color: #5E7559;
+            color: #5E7559;
+            background: #E8EDE6;
+        }
+
+        /* Avatar glow effect */
+        .avatar-glow {
+            box-shadow: 0 0 0 3px #FAFAF8, 0 0 0 5px #D1DBCD;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .avatar-glow:hover {
+            box-shadow: 0 0 0 3px #FAFAF8, 0 0 0 5px #5E7559;
+        }
+
+        /* Hero image ring */
+        .hero-ring {
+            position: relative;
+        }
+
+        .hero-ring::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #A3B89D, #D4B5A3, #A3B89D);
+            z-index: -1;
+            opacity: 0.6;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ============ NAVIGATION ============ -->
+    <!-- Navigation -->
     <nav class="fixed w-full top-0 left-0 bg-sand-50/90 backdrop-blur-md z-50 border-b border-sand-200/60">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
             <!-- Logo with small avatar -->
@@ -70,14 +246,13 @@
                 <div class="relative">
                     <img 
                         src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" 
-                        alt=" Jayanth" 
+                        alt="Jayanth" 
                         class="w-8 h-8 rounded-full object-cover avatar-glow"
                     >
                 </div>
                 <span class="text-lg font-medium text-sand-800 tracking-tight group-hover:text-sage-600 transition-colors">jayanth.dev</span>
             </a>
             
-            <!-- Desktop Navigation Menu -->
             <div class="hidden md:flex items-center gap-8">
                 <a href="#skills" class="text-sm text-sand-600 hover:text-sand-800 transition-colors soft-link">Skills</a>
                 <a href="#certs" class="text-sm text-sand-600 hover:text-sand-800 transition-colors soft-link">Certifications</a>
@@ -85,7 +260,6 @@
                 <a href="#contact" class="text-sm px-5 py-2 bg-sand-800 text-sand-50 rounded-full hover:bg-sand-700 transition-colors">Contact</a>
             </div>
 
-            <!-- Mobile Menu Toggle Button -->
             <button class="md:hidden text-sand-700" onclick="toggleMobileMenu()">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
@@ -94,7 +268,7 @@
         </div>
     </nav>
 
-    <!-- ============ MOBILE MENU ============ -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-sand-50/95 backdrop-blur-md md:hidden flex-col items-center justify-center gap-6">
         <a href="#skills" onclick="toggleMobileMenu()" class="text-xl text-sand-700">Skills</a>
         <a href="#certs" onclick="toggleMobileMenu()" class="text-xl text-sand-700">Certifications</a>
@@ -107,22 +281,22 @@
         </button>
     </div>
 
-    <!-- ============ HERO SECTION ============ -->
+    <!-- Hero -->
     <section class="pt-32 pb-20 md:pt-40 md:pb-28">
         <div class="max-w-4xl mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <!-- Profile Image with Ring Effect -->
+                <!-- Profile Image -->
                 <div class="flex-shrink-0 fade-in">
                     <div class="hero-ring">
                         <img 
                             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                            alt=" Jayanth Chennamsetti" 
+                            alt="Jayanth Chennamsetti" 
                             class="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover shadow-lg"
                         >
                     </div>
                 </div>
 
-                <!-- Hero Text Content -->
+                <!-- Text Content -->
                 <div class="text-center md:text-left">
                     <p class="text-sand-500 text-sm mb-3 fade-in" style="transition-delay: 0.1s;">ServiceNow Developer at Kaptius</p>
                     
@@ -135,7 +309,6 @@
                         ServiceNow Developer & Engineer building thoughtful enterprise solutions. Specialized in ITSM, ITOM, and custom application development.
                     </p>
                     
-                    <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-3 justify-center md:justify-start fade-in" style="transition-delay: 0.25s;">
                         <a href="#contact" class="px-6 py-3 bg-sand-800 text-sand-50 rounded-full text-sm font-medium hover:bg-sand-700 transition-colors">
                             Get in touch
@@ -150,13 +323,11 @@
         </div>
     </section>
 
-    <!-- Visual Divider -->
     <div class="soft-divider max-w-4xl mx-auto"></div>
 
-    <!-- ============ SKILLS SECTION ============ -->
+    <!-- Skills Section - Categorized by Technology -->
     <section id="skills" class="py-20 md:py-28">
         <div class="max-w-4xl mx-auto px-6">
-            <!-- Section Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
                     <h2 class="text-2xl font-medium text-sand-900 mb-2 fade-in">Skills by Technology</h2>
@@ -170,7 +341,7 @@
                 </button>
             </div>
 
-            <!-- Filter Tabs -->
+            <!-- Technology Filter Tabs -->
             <div class="flex flex-wrap gap-2 mb-8 fade-in" id="skill-filters">
                 <button class="category-tab active px-4 py-2 rounded-full text-sm font-medium" data-filter="all">All</button>
                 <button class="category-tab px-4 py-2 rounded-full text-sm font-medium" data-filter="servicenow">ServiceNow</button>
@@ -300,10 +471,9 @@
 
     <div class="soft-divider max-w-4xl mx-auto"></div>
 
-    <!-- ============ CERTIFICATIONS SECTION ============ -->
+    <!-- Certifications Section - Categorized by Technology -->
     <section id="certs" class="py-20 md:py-28">
         <div class="max-w-4xl mx-auto px-6">
-            <!-- Section Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
                     <h2 class="text-2xl font-medium text-sand-900 mb-2 fade-in">Certifications by Technology</h2>
@@ -317,7 +487,7 @@
                 </button>
             </div>
 
-            <!-- Filter Tabs -->
+            <!-- Technology Filter Tabs -->
             <div class="flex flex-wrap gap-2 mb-8 fade-in" id="cert-filters">
                 <button class="category-tab active px-4 py-2 rounded-full text-sm font-medium" data-filter="all">All</button>
                 <button class="category-tab px-4 py-2 rounded-full text-sm font-medium" data-filter="servicenow">ServiceNow</button>
@@ -421,10 +591,9 @@
 
     <div class="soft-divider max-w-4xl mx-auto"></div>
 
-    <!-- ============ BLOG SECTION ============ -->
+    <!-- Blog/Articles Section with Search -->
     <section id="blog" class="py-20 md:py-28">
         <div class="max-w-4xl mx-auto px-6">
-            <!-- Section Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
                     <h2 class="text-2xl font-medium text-sand-900 mb-2 fade-in">Blog & Articles</h2>
@@ -529,7 +698,7 @@
 
     <div class="soft-divider max-w-4xl mx-auto"></div>
 
-    <!-- ============ WORK EXPERIENCE SECTION ============ -->
+    <!-- Work Experience -->
     <section id="work" class="py-20 md:py-28">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-2xl font-medium text-sand-900 mb-10 fade-in">Work Experience</h2>
@@ -562,7 +731,7 @@
 
     <div class="soft-divider max-w-4xl mx-auto"></div>
 
-    <!-- ============ CONTACT SECTION ============ -->
+    <!-- Contact -->
     <section id="contact" class="py-20 md:py-28">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-medium text-sand-900 mb-4 fade-in">Let's work together</h2>
@@ -570,7 +739,6 @@
                 I'm open to freelance projects and full-time opportunities.
             </p>
             
-            <!-- Contact CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-3 justify-center fade-in" style="transition-delay: 0.2s;">
                 <a href="mailto:jayanth@example.com" class="px-8 py-3 bg-sand-800 text-sand-50 rounded-full text-sm font-medium hover:bg-sand-700 transition-colors">
                     jayanth@example.com
@@ -583,16 +751,16 @@
         </div>
     </section>
 
-    <!-- ============ FOOTER ============ -->
+    <!-- Footer -->
     <footer class="py-8 border-t border-sand-200/60">
         <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
                 <img 
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" 
-                    alt=" Jayanth" 
+                    alt="Jayanth" 
                     class="w-6 h-6 rounded-full object-cover"
                 >
-                <p class="text-sand-400 text-sm">© Jayanth Chennamsetti. All rights reserved.</p>
+                <p class="text-sand-400 text-sm"> Jayanth Chennamsetti. All rights reserved.</p>
             </div>
             <div class="flex gap-6">
                 <a href="https://linkedin.com/in/jayanthchennamsetti" target="_blank" class="text-sand-400 hover:text-sand-600 text-sm transition-colors soft-link">LinkedIn</a>
@@ -602,7 +770,7 @@
         </div>
     </footer>
 
-    <!-- ============ ADD ITEM MODAL ============ -->
+    <!-- Add Item Modal -->
     <div id="add-modal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-6">
         <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl">
             <h3 class="text-lg font-medium text-sand-900 mb-4" id="modal-title">Add New Item</h3>
@@ -621,7 +789,154 @@
         </div>
     </div>
 
-    <!-- ============ JAVASCRIPT ============ -->
-    <script src="script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // Add Modal
+        function showAddModal(type) {
+            const titles = {
+                skill: 'Add New Skill',
+                cert: 'Add New Certification',
+                blog: 'Add New Article'
+            };
+            document.getElementById('modal-title').textContent = titles[type] || 'Add New Item';
+            document.getElementById('add-modal').classList.remove('hidden');
+        }
+
+        function closeAddModal() {
+            document.getElementById('add-modal').classList.add('hidden');
+        }
+
+        // Fade in on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('load', () => {
+            document.querySelectorAll('section:first-of-type .fade-in').forEach((el, i) => {
+                setTimeout(() => el.classList.add('visible'), i * 100);
+            });
+        });
+
+        // Skills Filter
+        const skillFilters = document.querySelectorAll('#skill-filters .category-tab');
+        const skillItems = document.querySelectorAll('#skills-grid .skill-item');
+
+        skillFilters.forEach(tab => {
+            tab.addEventListener('click', () => {
+                skillFilters.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.dataset.filter;
+
+                skillItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(10px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Certifications Filter
+        const certFilters = document.querySelectorAll('#cert-filters .category-tab');
+        const certItems = document.querySelectorAll('#certs-grid .cert-card');
+
+        certFilters.forEach(tab => {
+            tab.addEventListener('click', () => {
+                certFilters.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.dataset.filter;
+
+                certItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Blog Search
+        const blogSearch = document.getElementById('blog-search');
+        const blogArticles = document.querySelectorAll('#blog-grid .blog-card');
+        const noResults = document.getElementById('no-blog-results');
+
+        blogSearch.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            blogArticles.forEach(article => {
+                const searchData = article.dataset.search.toLowerCase();
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const content = article.querySelector('p').textContent.toLowerCase();
+                const category = article.querySelector('.rounded-full').textContent.toLowerCase();
+
+                const isMatch = searchData.includes(searchTerm) || 
+                               title.includes(searchTerm) || 
+                               content.includes(searchTerm) ||
+                               category.includes(searchTerm);
+
+                if (isMatch) {
+                    article.classList.remove('hidden-item');
+                    visibleCount++;
+                } else {
+                    article.classList.add('hidden-item');
+                }
+            });
+
+            if (visibleCount === 0 && searchTerm !== '') {
+                noResults.classList.add('visible');
+            } else {
+                noResults.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
