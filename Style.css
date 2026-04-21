@@ -1,209 +1,183 @@
-/* ============ BODY AND BASE STYLES ============ */
-body {
-    font-family: 'DM Sans', sans-serif;
-    background-color: #FAFAF8;
-    color: #3E3B36;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
 
-/* ============ ANIMATIONS ============ */
-/* Lift effect on hover - used for cards and interactive elements */
-.lift {
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
-}
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #FAFAF8;
+            color: #3E3B36;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
-.lift:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.08);
-}
+        .lift {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+        }
 
-/* Fade in animation - used for scroll-triggered elements */
-.fade-in {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
+        .lift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.08);
+        }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+        .fade-in {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
 
-/* ============ LINKS ============ */
-/* Soft underline effect on links */
-.soft-link {
-    position: relative;
-    display: inline-block;
-}
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-.soft-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1.5px;
-    background: #5E7559;
-    transition: width 0.4s ease;
-}
+        .soft-link {
+            position: relative;
+            display: inline-block;
+        }
 
-.soft-link:hover::after {
-    width: 100%;
-}
+        .soft-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: #5E7559;
+            transition: width 0.4s ease;
+        }
 
-/* ============ TAGS AND BADGES ============ */
-/* Tag styling with hover and active states */
-.tag {
-    background: #F5F5F0;
-    border: 1px solid #EBE9E4;
-    transition: all 0.3s ease;
-}
+        .soft-link:hover::after {
+            width: 100%;
+        }
 
-.tag:hover {
-    background: #E8EDE6;
-    border-color: #A3B89D;
-}
+        .tag {
+            background: #F5F5F0;
+            border: 1px solid #EBE9E4;
+            transition: all 0.3s ease;
+        }
 
-.tag.active {
-    background: #5E7559;
-    color: #FAFAF8;
-    border-color: #5E7559;
-}
+        .tag:hover {
+            background: #E8EDE6;
+            border-color: #A3B89D;
+        }
 
-/* ============ DIVIDERS ============ */
-/* Soft gradient divider used between sections */
-.soft-divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #DDDAD3, transparent);
-}
+        .tag.active {
+            background: #5E7559;
+            color: #FAFAF8;
+            border-color: #5E7559;
+        }
 
-/* ============ TEXT SELECTION ============ */
-/* Custom selection highlight color */
-::selection {
-    background: #D1DBCD;
-    color: #3E3B36;
-}
+        .soft-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #DDDAD3, transparent);
+        }
 
-/* ============ CUSTOM SCROLLBAR ============ */
-/* Webkit scrollbar styling for Chrome, Edge, Safari */
-::-webkit-scrollbar {
-    width: 6px;
-}
+        ::selection {
+            background: #D1DBCD;
+            color: #3E3B36;
+        }
 
-::-webkit-scrollbar-track {
-    background: #FAFAF8;
-}
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
 
-::-webkit-scrollbar-thumb {
-    background: #DDDAD3;
-    border-radius: 3px;
-}
+        ::-webkit-scrollbar-track {
+            background: #FAFAF8;
+        }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #B8B4AA;
-}
+        ::-webkit-scrollbar-thumb {
+            background: #DDDAD3;
+            border-radius: 3px;
+        }
 
-/* ============ SEARCH INPUT ============ */
-/* Blog search input field styling */
-.search-input {
-    background: #F5F5F0;
-    border: 1px solid #EBE9E4;
-    transition: all 0.3s ease;
-}
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B8B4AA;
+        }
 
-.search-input:focus {
-    outline: none;
-    border-color: #A3B89D;
-    box-shadow: 0 0 0 3px rgba(163, 184, 157, 0.15);
-}
+        .search-input {
+            background: #F5F5F0;
+            border: 1px solid #EBE9E4;
+            transition: all 0.3s ease;
+        }
 
-/* ============ CATEGORY TABS ============ */
-/* Filter tab styling for skills, certs, etc. */
-.category-tab {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+        .search-input:focus {
+            outline: none;
+            border-color: #A3B89D;
+            box-shadow: 0 0 0 3px rgba(163, 184, 157, 0.15);
+        }
 
-.category-tab:hover {
-    background: #F5F5F0;
-}
+        .category-tab {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
-.category-tab.active {
-    background: #5E7559;
-    color: #FAFAF8;
-}
+        .category-tab:hover {
+            background: #F5F5F0;
+        }
 
-/* ============ ITEM CARDS ============ */
-/* Skills, certifications, and blog cards styling */
-.skill-item, .cert-card, .blog-card {
-    transition: all 0.3s ease;
-}
+        .category-tab.active {
+            background: #5E7559;
+            color: #FAFAF8;
+        }
 
-.skill-item:hover, .cert-card:hover {
-    background: #FAFAF8;
-    border-color: #A3B89D;
-}
+        .skill-item, .cert-card, .blog-card {
+            transition: all 0.3s ease;
+        }
 
-.blog-card:hover {
-    border-color: #A3B89D;
-}
+        .skill-item:hover, .cert-card:hover {
+            background: #FAFAF8;
+            border-color: #A3B89D;
+        }
 
-/* Hidden state for filtered items */
-.blog-card.hidden-item {
-    display: none;
-}
+        .blog-card:hover {
+            border-color: #A3B89D;
+        }
 
-/* ============ NO RESULTS MESSAGE ============ */
-/* Displayed when search/filter returns no results */
-.no-results {
-    display: none;
-    text-align: center;
-    padding: 3rem;
-    color: #9A9589;
-}
+        .blog-card.hidden-item {
+            display: none;
+        }
 
-.no-results.visible {
-    display: block;
-}
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+            color: #9A9589;
+        }
 
-/* ============ ADD BUTTON ============ */
-/* Button to add new skills, certs, or blog posts */
-.add-btn {
-    border: 2px dashed #DDDAD3;
-    color: #9A9589;
-    transition: all 0.3s ease;
-}
+        .no-results.visible {
+            display: block;
+        }
 
-.add-btn:hover {
-    border-color: #5E7559;
-    color: #5E7559;
-    background: #E8EDE6;
-}
+        .add-btn {
+            border: 2px dashed #DDDAD3;
+            color: #9A9589;
+            transition: all 0.3s ease;
+        }
 
-/* ============ AVATAR STYLES ============ */
-/* Avatar glow effect - used in navigation and hero */
-.avatar-glow {
-    box-shadow: 0 0 0 3px #FAFAF8, 0 0 0 5px #D1DBCD;
-    transition: box-shadow 0.3s ease;
-}
+        .add-btn:hover {
+            border-color: #5E7559;
+            color: #5E7559;
+            background: #E8EDE6;
+        }
 
-.avatar-glow:hover {
-    box-shadow: 0 0 0 3px #FAFAF8, 0 0 0 5px #5E7559;
-}
+        /* Avatar glow effect */
+        .avatar-glow {
+            box-shadow: 0 0 0 3px #FAFAF8, 0 0 0 5px #D1DBCD;
+            transition: box-shadow 0.3s ease;
+        }
 
-/* ============ HERO IMAGE RING ============ */
-/* Decorative ring effect around hero profile image */
-.hero-ring {
-    position: relative;
-}
+        .avatar-glow:hover {
+            box-shadow: 0 0 0 3px #FAFAF8, 0 0 0 5px #5E7559;
+        }
 
-.hero-ring::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #A3B89D, #D4B5A3, #A3B89D);
-    z-index: -1;
-    opacity: 0.6;
-}
+        /* Hero image ring */
+        .hero-ring {
+            position: relative;
+        }
+
+        .hero-ring::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #A3B89D, #D4B5A3, #A3B89D);
+            z-index: -1;
+            opacity: 0.6;
+        }
