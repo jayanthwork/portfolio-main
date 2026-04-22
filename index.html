@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ServiceNow Technical Consultant & Developer specializing in ITSM, CSM, and enterprise solutions.">
+    <meta name="keywords" content="ServiceNow, Developer, Consultant, ITSM, CSM, Enterprise Solutions">
+    <meta name="author" content="Jayanth Chennamsetti">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jayanth Chennamsetti — ServiceNow Developer & Consultant">
+    <meta property="og:description" content="ServiceNow Technical Consultant & Developer specializing in ITSM, CSM, and enterprise solutions.">
+    <meta property="og:url" content="https://jayanth.dev">
+    <meta property="twitter:card" content="summary">
+    
     <title>Jayanth Chennamsetti — ServiceNow Developer & Consultant</title>
+    
+    <!-- External Stylesheets -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -50,191 +65,6 @@
             }
         }
     </script>
-
-    <style>
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background-color: #FAFAF8;
-            color: #3E3B36;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .lift {
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
-        }
-
-        .lift:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.08);
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(16px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .soft-link {
-            position: relative;
-            display: inline-block;
-        }
-
-        .soft-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1.5px;
-            background: #5E7559;
-            transition: width 0.4s ease;
-        }
-
-        .soft-link:hover::after {
-            width: 100%;
-        }
-
-        .tag {
-            background: #F5F5F0;
-            border: 1px solid #EBE9E4;
-            transition: all 0.3s ease;
-        }
-
-        .tag:hover {
-            background: #E8EDE6;
-            border-color: #A3B89D;
-        }
-
-        .tag.active {
-            background: #5E7559;
-            color: #FAFAF8;
-            border-color: #5E7559;
-        }
-
-        .soft-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #DDDAD3, transparent);
-        }
-
-        ::selection {
-            background: #D1DBCD;
-            color: #3E3B36;
-        }
-
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #FAFAF8;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #DDDAD3;
-            border-radius: 3px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #B8B4AA;
-        }
-
-        .search-input {
-            background: #F5F5F0;
-            border: 1px solid #EBE9E4;
-            transition: all 0.3s ease;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: #A3B89D;
-            box-shadow: 0 0 0 3px rgba(163, 184, 157, 0.15);
-        }
-
-        .category-tab {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .category-tab:hover {
-            background: #F5F5F0;
-        }
-
-        .category-tab.active {
-            background: #5E7559;
-            color: #FAFAF8;
-        }
-
-        .skill-item, .cert-card, .blog-card {
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover, .cert-card:hover {
-            background: #FAFAF8;
-            border-color: #A3B89D;
-        }
-
-        .blog-card:hover {
-            border-color: #A3B89D;
-        }
-
-        .blog-card.hidden-item {
-            display: none;
-        }
-
-        .no-results {
-            display: none;
-            text-align: center;
-            padding: 3rem;
-            color: #9A9589;
-        }
-
-        .no-results.visible {
-            display: block;
-        }
-
-        .add-btn {
-            border: 2px dashed #DDDAD3;
-            color: #9A9589;
-            transition: all 0.3s ease;
-        }
-
-        .add-btn:hover {
-            border-color: #5E7559;
-            color: #5E7559;
-            background: #E8EDE6;
-        }
-
-        /* Avatar glow effect */
-        .avatar-glow {
-            box-shadow: 0 0 0 3px #FAFAF8, 0 0 0 5px #D1DBCD;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .avatar-glow:hover {
-            box-shadow: 0 0 0 3px #FAFAF8, 0 0 0 5px #5E7559;
-        }
-
-        /* Hero image ring */
-        .hero-ring {
-            position: relative;
-        }
-
-        .hero-ring::before {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #A3B89D, #D4B5A3, #A3B89D);
-            z-index: -1;
-            opacity: 0.6;
-        }
-    </style>
 </head>
 <body>
 
@@ -614,7 +444,7 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-3 justify-center fade-in" style="transition-delay: 0.2s;">
-                <a href="mailto:jayanthchennamsetti@gmail.com?subject=Professional%20Inquiry%20-%20ServiceNow%20Consulting%20%26%20Solutions&body=Hi%20Jayanth%2C%0D%0A%0D%0AI%27m%20reaching%20out%20to%20discuss%20potential%20opportunities%20for%20collaboration%20on%20ServiceNow%20solutions%20and%20enterprise%20development.%0D%0A%0D%0ALooking%20forward%20to%20connecting%21%0D%0A%0D%0ABest%20regards" class="px-8 py-3 bg-sand-800 text-sand-50 rounded-full text-sm font-medium hover:bg-sand-700 transition-colors">
+                <a href="mailto:jayanthchennamsetti@gmail.com" class="px-8 py-3 bg-sand-800 text-sand-50 rounded-full text-sm font-medium hover:bg-sand-700 transition-colors">
                     Contact Me
                 </a>
                 <a href="https://linkedin.com/in/jayanthchennamsetti" target="_blank" class="px-8 py-3 border border-sand-300 text-sand-700 rounded-full text-sm font-medium hover:border-sand-400 transition-colors flex items-center justify-center gap-2">
@@ -683,137 +513,9 @@
         function closeAddModal() {
             document.getElementById('add-modal').classList.add('hidden');
         }
-
-        // Fade in on scroll
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        window.addEventListener('load', () => {
-            document.querySelectorAll('section:first-of-type .fade-in').forEach((el, i) => {
-                setTimeout(() => el.classList.add('visible'), i * 100);
-            });
-        });
-
-        // Skills Filter
-        const skillFilters = document.querySelectorAll('#skill-filters .category-tab');
-        const skillItems = document.querySelectorAll('#skills-grid .skill-item');
-
-        skillFilters.forEach(tab => {
-            tab.addEventListener('click', () => {
-                skillFilters.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const filter = tab.dataset.filter;
-
-                skillItems.forEach(item => {
-                    if (filter === 'all' || item.dataset.category === filter) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'translateY(0)';
-                        }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'translateY(10px)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Certifications Filter
-        const certFilters = document.querySelectorAll('#cert-filters .category-tab');
-        const certItems = document.querySelectorAll('#certs-grid .cert-card');
-
-        certFilters.forEach(tab => {
-            tab.addEventListener('click', () => {
-                certFilters.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const filter = tab.dataset.filter;
-
-                certItems.forEach(item => {
-                    if (filter === 'all' || item.dataset.category === filter) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.95)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-
-        // Blog Search
-        const blogSearch = document.getElementById('blog-search');
-        const blogArticles = document.querySelectorAll('#blog-grid .blog-card');
-        const noResults = document.getElementById('no-blog-results');
-
-        blogSearch.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase().trim();
-            let visibleCount = 0;
-
-            blogArticles.forEach(article => {
-                const searchData = article.dataset.search.toLowerCase();
-                const title = article.querySelector('h3').textContent.toLowerCase();
-                const content = article.querySelector('p').textContent.toLowerCase();
-                const category = article.querySelector('.rounded-full').textContent.toLowerCase();
-
-                const isMatch = searchData.includes(searchTerm) || 
-                               title.includes(searchTerm) || 
-                               content.includes(searchTerm) ||
-                               category.includes(searchTerm);
-
-                if (isMatch) {
-                    article.classList.remove('hidden-item');
-                    visibleCount++;
-                } else {
-                    article.classList.add('hidden-item');
-                }
-            });
-
-            if (visibleCount === 0 && searchTerm !== '') {
-                noResults.classList.add('visible');
-            } else {
-                noResults.classList.remove('visible');
-            }
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }
-            });
-        });
     </script>
+    
+    <!-- External Script -->
+    <script src="script.js" defer></script>
 </body>
 </html>
