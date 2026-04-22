@@ -185,3 +185,24 @@ body {
     z-index: -1;
     opacity: 0.6;
 }
+
+/* Animated gradient text */
+@keyframes gradientCycle {
+    0% {
+        color: #7A756B;
+    }
+    33% {
+        color: #5E7559;
+    }
+    66% {
+        color: #9C7561;
+    }
+    100% {
+        color: #7A756B;
+    }
+}
+
+.animate-gradient {
+    animation: gradientCycle 6s ease-in-out infinite;
+    font-weight: 600;
+}
